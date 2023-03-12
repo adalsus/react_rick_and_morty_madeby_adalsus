@@ -1,5 +1,8 @@
 import React from "react";
 
+import {FondoCard, Caricatura, Letras, BtnXcard} from "../css/estilos.jsx";
+
+
 class Card extends React.Component {
    constructor(props) {
       super(props);
@@ -8,15 +11,16 @@ class Card extends React.Component {
    }
    render() {
       return (
-         <div id={this.campos.id}>
-            <button onClick={this.onClose}>X</button>
-            <h2>{this.campos.name}</h2>
-            <h2>{this.campos.species}</h2>
-            <h2>{this.campos.gender}</h2>
-            <img src={this.campos.image} alt={this.campos.name} />
-         </div>
+         <FondoCard key={this.campos.id}>
+            <BtnXcard onClick={this.onClose}>X</BtnXcard>
+            <Letras>{this.campos.name}</Letras>
+            <Letras>{this.campos.species}</Letras>
+            <Letras>{this.campos.gender}</Letras>
+            <Caricatura src={this.campos.image} alt={this.campos.name} />
+         </FondoCard>
       );
    }
 }
 
 export default Card;
+
