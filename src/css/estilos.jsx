@@ -34,7 +34,7 @@ const Caricatura = styled.img`
 `;
 
 const Entrada = styled.input`
-  height: 50px;
+  height: 44.4px;
   width: 20vw;
 `;
 
@@ -49,8 +49,8 @@ const Menu = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: right;
-  padding-bottom: 20px;
-  padding-top: 10px;
+  padding: 10px;
+  background-color: #25c523;
 `;
 
 const Actividad = styled.div`

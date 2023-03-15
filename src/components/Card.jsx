@@ -11,8 +11,8 @@ class Card extends React.Component {
    }
    render() {
       return (
-         <FondoCard key={this.campos.id}>
-            <BtnXcard onClick={this.onClose}>X</BtnXcard>
+         <FondoCard key={this.campos.id} className={this.campos.name}>
+            <BtnXcard onClick={this.onClose} className={this.campos.id}>X</BtnXcard>
             <Letras>{this.campos.name}</Letras>
             <Letras>{this.campos.species}</Letras>
             <Letras>{this.campos.gender}</Letras>

@@ -1,5 +1,5 @@
 import imgNames from '../../../img/img_name.js'
-import fn_ldstime from '../../fns/fnsApp'
+import {fn_ldstime} from '../../fns/fnsApp'
 
 
 const valCSS = {
