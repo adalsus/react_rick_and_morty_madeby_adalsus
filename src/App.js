@@ -8,6 +8,9 @@ import Nav from './components/Nav.jsx'
 import React from 'react';
 
 import {fn_hayID} from './js/fns/fnsApp.js';
+import { Routes, Route } from 'react-router-dom'
+import About from './components/About.jsx'
+import Detail from './components/Detail.jsx'
 
 //Hecho por adalsus
 function App() {
@@ -37,8 +40,10 @@ function App() {
                           const obj_data = {
                             id: (data.id)-0,
                             name: data.name,
+                            status: data.status,
                             species: data.species,
                             gender: data.gender,
+                            origin: data.origin,
                             image: data.image,
                           }
                           characters.push(obj_data);
@@ -70,8 +75,13 @@ function App() {
                               backgroundImage: valCSS.urlImg,
                               backgroundSize: valCSS.bgSize 
                           }}>
-      
-      <Cards characters={characters} Figuritas={Figuritas} setFiguritas={setFiguritas}/>
+      <Routes>
+        <Route path='/' element={
+          <Cards characters={characters} Figuritas={Figuritas} setFiguritas={setFiguritas}/>
+        }/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/detail/:detailId' element={<Detail characters={characters} />}/>
+      </Routes>
       <hr />
       <Nav onSearch={ characterID } onChange={ handleChange } />
     </div>

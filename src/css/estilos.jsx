@@ -60,7 +60,23 @@ const Actividad = styled.div`
   vertical-align: center;
 `;
 
+const Enlaces = styled.div`
+  background-color: #25c523;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+`;
+
+const DetalleCard = styled.div`
+  background-color: #34B29F;
+  padding: 0.10% 0.10%;
+  width: 41%;
+  margin: auto;
+`;
+
 
 export {  FondoCard, Agrupador, Caricatura, Letras, Entrada, BtnAgregar,
-          Menu, Actividad, BtnXcard  }
+          Menu, Actividad, BtnXcard, Enlaces, DetalleCard  }
 
