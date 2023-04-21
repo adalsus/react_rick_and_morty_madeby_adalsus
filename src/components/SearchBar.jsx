@@ -1,8 +1,12 @@
+import { Entrada, BtnAgregar, Menu, Actividad } from "../css/estilos.jsx";
+
 export default function SearchBar(props) {
    return (
-      <div>
-           <input type='search' />
-           <button onClick={props.onSearch}>Agregar</button>
-      </div>
+       <Menu>
+           <Actividad>
+               <Entrada type='search'></Entrada>
+               <BtnAgregar onClick={props.onSearch}>Agregar</BtnAgregar>
+           </Actividad>
+       </Menu>
    );
 }

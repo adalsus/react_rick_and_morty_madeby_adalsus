@@ -1,4 +1,4 @@
-const Rick = {
+/*const Rick = {
    id: 1,
    name: 'Rick Sanchez',
    status: 'Alive',
@@ -9,10 +9,10 @@ const Rick = {
       url: 'https://rickandmortyapi.com/api/location/1',
    },
    image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-};
+};*/
 
 const characters = [
-   /*{
+   {
       id: 1,
       name: 'Rick Sanchez',
       status: 'Alive',
@@ -23,7 +23,7 @@ const characters = [
          url: 'https://rickandmortyapi.com/api/location/1',
       },
       image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-   },*/
+   },
    {
       id: 2,
       name: 'Morty Smith',
@@ -75,4 +75,4 @@ const characters = [
 ];
 
 
-export { Rick, characters };
+export { characters };
