@@ -76,3 +76,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### React - Intro<br>
 
 [Video](https://youtu.be/kYMnLsMNnHw)<<-- Clic, para ver el resultado
+
+### React - Estilos<br>
+
+[Video](https://youtu.be/qfA0DncfPPg)<<-- Clic, para ver el resultado
