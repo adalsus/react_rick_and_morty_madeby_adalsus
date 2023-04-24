@@ -5,6 +5,16 @@ import Intro from './Intro.jsx';
 import App from './App.jsx';
 import reportWebVitals from './reportWebVitals'
 
+
+//Configuración por defecto
+//conPersonajesRandom = 'si' para asignar Personajes Random
+import { asignarA } from './js/fns/fnsApp.js';
+import { characters } from './data.js'
+const conPersonajesRandom = 'si';
+if (conPersonajesRandom === 'si') asignarA(characters);
+//Configuración
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Intro />);
 
@@ -16,6 +26,10 @@ function inicie() {
     );
 }
 setInterval(inicie, 2400);
+
+
+//Adalberto Monar
+
 
 /*if (module.hot) {
   module.hot.accept();

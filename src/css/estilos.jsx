@@ -39,7 +39,7 @@ const Entrada = styled.input`
 `;
 
 const BtnAgregar = styled.button`
-  height: 44.4px;
+  height: 50px;
   width: 15vw;
   font-size: 2.25vw;
   font-weight: bold;

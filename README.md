@@ -80,3 +80,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### React - Estilos<br>
 
 [Video](https://youtu.be/qfA0DncfPPg)<<-- Clic, para ver el resultado
+
+### React - Estado - LifeCycle<br>
+
+[Video](https://youtu.be/IMaljvm6na0)<<-- Clic, para ver el resultado
