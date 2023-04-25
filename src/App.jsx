@@ -128,7 +128,7 @@ class App extends React.Component {
             )
             .catch(
                 (error) => {
-                    window.alert(`${error.response.data.error} => No hay personaje con el ID ${this.TextInput}`);
+                    window.alert(`${error.response.data.error} => No hay personaje con el ID ${this.state.TextInput}`);
                 }
             )
 
