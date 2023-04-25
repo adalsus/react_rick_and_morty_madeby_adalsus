@@ -50,7 +50,7 @@ class Cards extends React.Component {
             let posID = fn_retIndex(idAexc, this.characters);
             this.characters.splice(posID, 1);
             this.Figuritas.splice(posID, 1);
-            this.setFiguritas(this.characters.map((elem, i) => this.Figuritas[i] = elem));
+            //this.setFiguritas(this.characters.map((elem, i) => this.Figuritas[i] = elem));  <--DESCOMENTE SI APP ESTÁ COMO FUNCTION
         }
 
         return (

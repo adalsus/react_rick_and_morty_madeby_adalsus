@@ -22,7 +22,7 @@ class Nav extends React.Component {
     render() {
         return (
             <Menu>
-                <SearchBar onSearch={ this.props.onSearch } onChange={this.props.onChange} />
+                <SearchBar onSearch={this.props.onSearch} onChange={this.props.onChange} />
             </Menu>
         );
     }

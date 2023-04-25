@@ -15,7 +15,7 @@ import { fn_hayID } from './js/fns/fnsApp.js';
 //Hecho por adalsus
 
 //FORMA CON FUNCTION
-/* */
+/* 
 function App() {
 
     //Usé identificador TextInput en vez de poner id
@@ -84,9 +84,8 @@ function App() {
 
 
 //FORMA CON CLASS
-/* 
+/* */
 class App extends React.Component {
-    
 
     //Usé identificador TextInput en vez de poner id
     state = { 
@@ -96,19 +95,19 @@ class App extends React.Component {
     }
     //P.D.: Usé identificador Figuritas en vez de poner characters
     //      y lo inicialicé con los characters de data.js
-   
+
     handleChange = (e) => {
         //setTextInput(e.target.value + ''); <-- así es con componente funcional
         this.setState(
-            {TextInput: e.target.value + ''};
+            (() => {  Object.assign(this.state,{TextInput: e.target.value+''})  })
         )
     }
-    
-    characterID = () => {
-        const cromo = fn_hayID(TextInput - 0, characters);
-        if (cromo.length === 0 && TextInput - 0 > 0) {
 
-            axios(`${URL_BASE}/character/${TextInput}`)
+    characterID = () => {
+        const cromo = fn_hayID(this.state.TextInput - 0, characters);
+        if (cromo.length === 0 && this.state.TextInput - 0 > 0) {
+
+            axios(`${URL_BASE}/character/${this.state.TextInput}`)
             .then(
                 ({ data }) => {
                     const obj_data = {
@@ -123,13 +122,13 @@ class App extends React.Component {
                     characters.push(obj_data);
                         //setFiguritas(characters.map((elem, i) => Figuritas[i] = elem)); <-- así es con componente funcional
                     this.setState(
-                        {Figuritas: characters.map((elem, i) => this.state.Figuritas[i] = elem)};
+                        (() => { Object.assign(this.state, { Figuritas: [...characters] })  })
                     )
                 }
             )
             .catch(
                 (error) => {
-                    window.alert(`${error.response.data.error} => No hay personaje con el ID ${TextInput}`);
+                    window.alert(`${error.response.data.error} => No hay personaje con el ID ${this.TextInput}`);
                 }
             )
 
