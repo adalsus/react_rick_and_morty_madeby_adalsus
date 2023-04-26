@@ -1,15 +1,20 @@
 import './App.css';
-import Cards from './components/Cards.jsx'
+import Cards from './components/Cards.jsx';
 
-import { characters } from './data.js'
-import { valCSS } from './js/ids/App/idsApp.js'
-import { URL_BASE } from './js/ids/App/idsApp.js'
-import Nav from './components/Nav.jsx'
+import { characters } from './data.js';
+import { valCSS } from './js/ids/App/idsApp.js';
+import { URL_BASE } from './js/ids/App/idsApp.js';
+import Nav from './components/Nav.jsx';
 
 import React from 'react';
 import axios from 'axios';
 
 import { fn_hayID } from './js/fns/fnsApp.js';
+
+import { Routes, Route } from 'react-router-dom';
+
+import About from './components/About.jsx';
+import Detail from './components/Detail.jsx';
 
 
 //Hecho por adalsus
@@ -73,8 +78,18 @@ function App() {
                 backgroundImage: valCSS.urlImg,
                 backgroundSize: valCSS.bgSize
             }}>
-            
-            <Cards characters={characters} Figuritas={Figuritas} setFiguritas={setFiguritas} />
+                
+                <Routes>
+                
+                    <Route path='/' element={
+                        <Cards characters={characters} Figuritas={this.state.Figuritas} setFiguritas={this.state.setFiguritas} />
+                    }/>
+
+                    <Route path='/about' element={<About/>}/>
+                    <Route path='/detail/:detailId' element={<Detail characters={characters} />}/>
+                
+                </Routes>
+
             <hr />
             <Nav onSearch={characterID} onChange={handleChange} />
         </div>
@@ -149,8 +164,18 @@ class App extends React.Component {
                     backgroundImage: valCSS.urlImg,
                     backgroundSize: valCSS.bgSize
                 }}>
-            
-                <Cards characters={characters} Figuritas={this.state.Figuritas} setFiguritas={this.state.setFiguritas} />
+                
+                <Routes>
+                
+                    <Route path='/' element={
+                        <Cards characters={characters} Figuritas={this.state.Figuritas} setFiguritas={this.state.setFiguritas} />
+                    }/>
+
+                    <Route path='/about' element={<About/>}/>
+                    <Route path='/detail/:detailId' element={<Detail characters={characters} />}/>
+                
+                </Routes>
+
                 <hr />
                 <Nav onSearch={this.characterID} onChange={this.handleChange} />
             </div>

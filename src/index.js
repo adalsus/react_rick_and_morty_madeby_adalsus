@@ -5,6 +5,8 @@ import Intro from './Intro.jsx';
 import App from './App.jsx';
 import reportWebVitals from './reportWebVitals'
 
+import { BrowserRouter } from "react-router-dom";
+
 
 //Configuración por defecto
 //conPersonajesRandom = 'si' para asignar Personajes Random
@@ -20,9 +22,9 @@ root.render(<Intro />);
 
 function inicie() {
     root.render(
-        <React.StrictMode>
+        <BrowserRouter>
             <App />
-        </React.StrictMode>
+        </BrowserRouter>
     );
 }
 setInterval(inicie, 2400);

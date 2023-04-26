@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Menu } from ".././css/estilos.jsx";
+import { Menu, Enlaces } from ".././css/estilos.jsx";
 import SearchBar from './SearchBar.jsx';
+import { Link } from "react-router-dom";
 
 
 //FORMA CON FUNCTION
@@ -9,6 +10,12 @@ import SearchBar from './SearchBar.jsx';
 const Nav = function(props) {
     return (
         <Menu>
+            <Enlaces>
+                <pre>   * </pre>
+                <Link to='/'>Home</Link><pre>      </pre>
+                <Link to='/about'>About</Link>
+                <pre>     </pre>
+            </Enlaces>
             <SearchBar onSearch={ props.onSearch } onChange={props.onChange} />
         </Menu>
     );
@@ -22,6 +29,12 @@ class Nav extends React.Component {
     render() {
         return (
             <Menu>
+                <Enlaces>
+                    <pre>   * </pre>
+                    <Link to='/'>Home</Link><pre>      </pre>
+                    <Link to='/about'>About</Link>
+                    <pre>     </pre>
+                </Enlaces>
                 <SearchBar onSearch={this.props.onSearch} onChange={this.props.onChange} />
             </Menu>
         );
@@ -29,5 +42,6 @@ class Nav extends React.Component {
 }
 /* */
 
+//Estudiante:  Adalberto Monar devFT-37b
 
 export default Nav;
