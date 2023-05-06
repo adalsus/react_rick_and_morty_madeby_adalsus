@@ -1,41 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Intro from './Intro.jsx';
-import App from './App.jsx';
+
 import reportWebVitals from './reportWebVitals'
 
-import { BrowserRouter } from "react-router-dom";
+import Form from './Form.jsx';
 
 
-//Configuración por defecto
-//conPersonajesRandom = 'si' para asignar Personajes Random
-import { asignarA } from './js/fns/fnsApp.js';
-import { characters } from './data.js'
-const conPersonajesRandom = 'si';
-if (conPersonajesRandom === 'si') asignarA(characters);
-//Configuración
-
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Intro />);
-
-function inicie() {
-    root.render(
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
-    );
-}
-setInterval(inicie, 2400);
+const temp_root = ReactDOM.createRoot(document.getElementById('temp_root'));
+temp_root.render(<Form />);
 
 
 //Adalberto Monar
-
-
-/*if (module.hot) {
-  module.hot.accept();
-}*/
 
 
 // If you want to start measuring performance in your app, pass a function

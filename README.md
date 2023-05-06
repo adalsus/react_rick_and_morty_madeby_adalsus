@@ -1,3 +1,27 @@
+## react-js rick and morty made by adalsus.- step by step from scratch
+
+### React - Intro<br>
+
+[Video](https://youtu.be/kYMnLsMNnHw)<<-- Clic, para ver el resultado
+
+### React - Estilos<br>
+
+[Video](https://youtu.be/qfA0DncfPPg)<<-- Clic, para ver el resultado
+
+### React - Estado - LifeCycle<br>
+
+[Video](https://youtu.be/IMaljvm6na0)<<-- Clic, para ver el resultado
+
+### React - Routing<br>
+
+[Video](https://youtu.be/L7jhy8Jpz6A)<<-- Clic, para ver el resultado
+
+### React - Forms<br>
+
+[Video](https://youtu.be/3YZMApy6bIo)<<-- Clic, para ver el resultado
+
+<br>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -38,23 +62,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-<br>
-
-## react-js rick and morty made by adalsus.- step by step from scratch
-
-### React - Intro<br>
-
-[Video](https://youtu.be/kYMnLsMNnHw)<<-- Clic, para ver el resultado
-
-### React - Estilos<br>
-
-[Video](https://youtu.be/qfA0DncfPPg)<<-- Clic, para ver el resultado
-
-### React - Estado - LifeCycle<br>
-
-[Video](https://youtu.be/IMaljvm6na0)<<-- Clic, para ver el resultado
-
-### React - Routing<br>
-
-[Video](https://youtu.be/L7jhy8Jpz6A)<<-- Clic, para ver el resultado

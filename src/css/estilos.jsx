@@ -86,7 +86,24 @@ const Face = styled.img`
     object-fit: contain;
 `;
 
+const Login = styled.form`
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    font-weight: bold;
+    color: #282c34;
+`;
+
+const Campos = styled.label`
+    width: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+`;
+
 
 export {  FondoCard, Agrupador, Caricatura, Letras, Entrada, BtnAgregar,
-          Menu, Actividad, BtnXcard,  Enlaces,  DetalleCard, Face, Secc  }
+          Menu, Actividad, BtnXcard, Enlaces, DetalleCard, Face, Secc, Login, Campos  }
 

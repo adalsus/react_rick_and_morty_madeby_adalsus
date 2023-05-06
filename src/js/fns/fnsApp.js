@@ -68,4 +68,8 @@ const asignarA = (coleccion) => {
     }
 }
 
-export { fn_ldstime, random0_9, fn_hayID, fn_retIndex, asignarA }
+const fn_deco = (arrV) => {
+    return (arrV.map(elem => String.fromCodePoint(parseInt(elem, 16)))).join('');
+};
+
+export { fn_ldstime, random0_9, fn_hayID, fn_retIndex, asignarA, fn_deco }
