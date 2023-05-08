@@ -22,7 +22,7 @@ class SearchBar extends React.Component {
         return (
             <Actividad>
                 <Entrada type='number' onChange={this.props.onChange}></Entrada>
-                <BtnAgregar onClick={this.props.onSearch}>Agregar</BtnAgregar>
+                <BtnAgregar id='btnAdd' onClick={this.props.onSearch} disabled={this.props.valBAdd}>Agregar</BtnAgregar>
             </Actividad>
         );
     }

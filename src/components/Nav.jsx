@@ -35,7 +35,11 @@ class Nav extends React.Component {
                     <Link to='/about'>About</Link>
                     <pre>     </pre>
                 </Enlaces>
-                <SearchBar onSearch={this.props.onSearch} onChange={this.props.onChange} />
+                <SearchBar 
+                    onSearch={this.props.onSearch} 
+                    onChange={this.props.onChange}
+                    valBAdd={this.props.valBAdd}
+                />
             </Menu>
         );
     }

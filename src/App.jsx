@@ -106,7 +106,8 @@ class App extends React.Component {
     state = { 
         TextInput: '',
         Figuritas: [...characters],
-        setFiguritas: undefined
+        setFiguritas: undefined,
+        valBAdd: false,
     }
     //P.D.: Usé identificador Figuritas en vez de poner characters
     //      y lo inicialicé con los characters de data.js
@@ -168,16 +169,27 @@ class App extends React.Component {
                 <Routes>
                 
                     <Route path='/' element={
-                        <Cards characters={characters} Figuritas={this.state.Figuritas} setFiguritas={this.state.setFiguritas} />
+                        <Cards 
+                            characters={characters} 
+                            Figuritas={this.state.Figuritas} 
+                            setFiguritas={this.state.setFiguritas}
+                            state={this.state}
+                        />
                     }/>
 
-                    <Route path='/about' element={<About/>}/>
-                    <Route path='/detail/:detailId' element={<Detail characters={characters} />}/>
+                    <Route path='/about' element = {<About state={this.state} />}
+                    />
+                    <Route path='/detail/:detailId' element={<Detail characters={characters} state={this.state} />}
+                    />
                 
                 </Routes>
 
                 <hr />
-                <Nav onSearch={this.characterID} onChange={this.handleChange} />
+                <Nav 
+                    onSearch={this.characterID} 
+                    onChange={this.handleChange}
+                    valBAdd={this.state.valBAdd}
+                />
             </div>
         );
     }

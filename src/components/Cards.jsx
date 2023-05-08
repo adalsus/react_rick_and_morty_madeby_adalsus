@@ -42,8 +42,13 @@ class Cards extends React.Component {
         this.characters = props.characters;
         this.Figuritas = props.Figuritas;
         this.setFiguritas = props.setFiguritas;
+        this.valBAdd = props.valBAdd;
     }
     render() {
+        //Habilito el botón Agregar
+        if (this.props.state.valBAdd===true) {
+            Object.assign(this.props.state,{valBAdd:false});
+        }//
         const bXcard = (e) => {
             //window.alert('Emulamos que se cierra la card');
             const idAexc = (e.target.classList[2]) - 0;

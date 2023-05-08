@@ -7,10 +7,16 @@ import { DetalleCard, Caricatura, Letras } from ".././css/estilos.jsx";
 //FORMA CON FUNCTION
 /* */
 function Detail(props) {
+  
   const { detailId } = useParams({})
   const [ cromo ] = props.characters.filter( elem => elem.id === detailId-0 );
   //console.log(cromo);
-
+  
+  //Lo siguiente inhabilita el botón Agregar ya que su funcionalidad sólo es para Cards
+  if (props.state.valBAdd===false) {
+    Object.assign(props.state,{valBAdd:true});
+  }//
+ 
   return ( 
       <div>
         <h1>Card Detail</h1>

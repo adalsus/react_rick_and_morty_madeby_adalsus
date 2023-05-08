@@ -13,16 +13,18 @@ import { fn_deco } from './js/fns/fnsApp';
 import background_to_Form from './img/Background_to_Form.jpg'
 import { Campos } from "./css/estilos.jsx";
 
-//Configuración por defecto
-//conPersonajesRandom = 'si' para asignar Personajes Random
 import { asignarA } from './js/fns/fnsApp.js';
 import { characters } from './data.js'
-const conPersonajesRandom = 'si';
-if (conPersonajesRandom === 'si') asignarA(characters);
-//Configuración
 
 
 const root = () => {
+
+    //Configuración por defecto
+    //conPersonajesRandom = 'si' para asignar Personajes Random
+    const conPersonajesRandom = 'si';
+    if (conPersonajesRandom === 'si') asignarA(characters);
+    //Configuración
+
 
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(<Intro />);
