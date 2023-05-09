@@ -21,7 +21,7 @@ class SearchBar extends React.Component {
     render() {
         return (
             <Actividad>
-                <Entrada type='number' onChange={this.props.onChange}></Entrada>
+                <Entrada type='number' onChange={this.props.onChange} placeholder={`Escriba un ID`}></Entrada>
                 <BtnAgregar id='btnAdd' onClick={this.props.onSearch} disabled={this.props.valBAdd}>Agregar</BtnAgregar>
             </Actividad>
         );

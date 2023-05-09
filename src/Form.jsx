@@ -19,6 +19,7 @@ import { characters } from './data.js'
 
 const root = () => {
 
+
     //Configuración por defecto
     //conPersonajesRandom = 'si' para asignar Personajes Random
     const conPersonajesRandom = 'si';
@@ -57,18 +58,21 @@ const Form = () => {
         // Prevent the browser from reloading the page
         e.preventDefault();
 
-        // Read the form data
+        // Read e.target
         const form = e.target;
-        const formData = new FormData(form);
-
+        
+        //const formData = new FormData(form);
         // You can pass formData as a fetch body directly:
         //fetch('/some-api', { method: form.method, body: formData });
 
         // Or you can work with it as a plain object:
-        const formJson = Object.fromEntries(formData.entries());
+        //const formJson = Object.fromEntries(formData.entries());
         //console.log(formJson);
-        if (formJson['login_e-mail'] === fn_deco(credentials.admin.email)
-            & formJson['login_contraseña'] === fn_deco(credentials.admin.password)) {
+
+        //console.log(form['0'].value);
+        //console.log(form['1'].value);
+        if (form['0'].value === fn_deco(credentials.admin.email)
+            & form['1'].value === fn_deco(credentials.admin.password)) {
             const div_temp_root = document.getElementById("temp_root");
             div_temp_root.remove();
             alert('Ingreso autorizado');
