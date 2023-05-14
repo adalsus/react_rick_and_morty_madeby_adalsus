@@ -16,10 +16,12 @@ import { Routes, Route } from 'react-router-dom';
 import About from './components/About.jsx';
 import Detail from './components/Detail.jsx';
 
+import Favoritos from './components/Favoritos.jsx';
+
 
 //Hecho por adalsus
 
-//FORMA CON FUNCTION
+//FORMA CON FUNCTION  <-- Falta actualizarla
 /* 
 function App() {
 
@@ -174,12 +176,16 @@ class App extends React.Component {
                             Figuritas={this.state.Figuritas} 
                             setFiguritas={this.state.setFiguritas}
                             state={this.state}
+                            setState={this.setState}
                         />
                     }/>
 
                     <Route path='/about' element = {<About state={this.state} />}
                     />
                     <Route path='/detail/:detailId' element={<Detail characters={characters} state={this.state} />}
+                    />
+
+                    <Route path='/favoritos' element = {<Favoritos state={this.state} />}
                     />
                 
                 </Routes>
@@ -196,7 +202,7 @@ class App extends React.Component {
 }
 /* */
 
-//Estudiante: Adalberto Monar devFT-37b
+//Estudiante: Adalberto Monar
 
 
 export default App;

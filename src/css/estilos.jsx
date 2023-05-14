@@ -17,9 +17,9 @@ const FondoCard = styled.div`
 const BtnXcard = styled.button`
   display: flexbox;
   justify-content: center;
-  height: 2.5vw;
-  width: 2.5vw;
-  font-size: 1vw;
+  height: 2.75vw;
+  width: 2.75vw;
+  font-size: 1.25vw;
   padding: 0;
   margin-bottom: -2.25vw;
 `;
@@ -29,13 +29,24 @@ const Letras = styled.h3`
   font-size: 2vw;
 `;
 
+const BtnFAVcard = styled.button`
+  display: flexbox;
+  justify-content: center;
+  height: 3vw;
+  width: 3vw;
+  font-size: 1.5vw;
+  padding: 0;
+  margin-top: -2.25vw;
+`;
+
 const Caricatura = styled.img`
   width: 100%;
 `;
 
 const Entrada = styled.input`
-  height: 44.4px;
+  height: 44.3px;
   width: 20vw;
+  font-size: 2.25vw;
 `;
 
 const BtnAgregar = styled.button`
@@ -104,6 +115,6 @@ const Campos = styled.label`
 `;
 
 
-export {  FondoCard, Agrupador, Caricatura, Letras, Entrada, BtnAgregar,
+export {  FondoCard, Agrupador, BtnFAVcard, Caricatura, Letras, Entrada, BtnAgregar,
           Menu, Actividad, BtnXcard, Enlaces, DetalleCard, Face, Secc, Login, Campos  }
 

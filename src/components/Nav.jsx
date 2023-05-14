@@ -5,7 +5,7 @@ import SearchBar from './SearchBar.jsx';
 import { Link } from "react-router-dom";
 
 
-//FORMA CON FUNCTION
+//FORMA CON FUNCTION  <-- Falta actualizarla
 /* 
 const Nav = function(props) {
     return (
@@ -34,6 +34,8 @@ class Nav extends React.Component {
                     <Link to='/'>Home</Link><pre>      </pre>
                     <Link to='/about'>About</Link>
                     <pre>     </pre>
+                    <Link to='/favoritos'>Favoritos</Link>
+                    <pre>     </pre>
                 </Enlaces>
                 <SearchBar 
                     onSearch={this.props.onSearch} 
@@ -46,6 +48,6 @@ class Nav extends React.Component {
 }
 /* */
 
-//Estudiante:  Adalberto Monar devFT-37b
+//Estudiante:  Adalberto Monar
 
 export default Nav;

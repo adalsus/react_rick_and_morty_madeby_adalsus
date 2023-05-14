@@ -12,7 +12,7 @@ function Intro() {
   );
 }
 
-//Estudiante: Adalberto Monar devFT-37b
+//Estudiante: Adalberto Monar
 
 
 export default Intro;

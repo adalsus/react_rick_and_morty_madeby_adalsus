@@ -16,6 +16,8 @@ import { Campos } from "./css/estilos.jsx";
 import { asignarA } from './js/fns/fnsApp.js';
 import { characters } from './data.js'
 
+import { Provider } from 'react-redux';
+import store from './redux/store.js';
 
 const root = () => {
 
@@ -33,9 +35,11 @@ const root = () => {
 
     function inicie() {
         root.render(
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
+            <Provider store={store}>
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+            </Provider>
         );
     }
     setInterval(inicie, 2400);
@@ -75,7 +79,7 @@ const Form = () => {
             & form['1'].value === fn_deco(credentials.admin.password)) {
             const div_temp_root = document.getElementById("temp_root");
             div_temp_root.remove();
-            alert('Ingreso autorizado');
+            //alert('Ingreso autorizado');
 
             root();
         } else {
@@ -131,6 +135,6 @@ const Form = () => {
             </div>
         </Login>
     );
-};
+};//Estudiante: Adalberto Monar
 
 export default Form;

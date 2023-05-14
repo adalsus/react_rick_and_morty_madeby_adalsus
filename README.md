@@ -20,6 +20,10 @@
 
 [Video](https://youtu.be/3YZMApy6bIo)<<-- Clic, para ver el resultado
 
+### React - Redux<br>
+
+[Video](https://youtu.be/ERQRRrG1t7Q)<<-- Clic, para ver el resultado
+
 <br>
 
 # Getting Started with Create React App

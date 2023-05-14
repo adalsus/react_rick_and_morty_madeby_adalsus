@@ -35,7 +35,7 @@ function Detail(props) {
 
 
 
-//FORMA CON CLASS
+//FORMA CON CLASS  <-- Falta actualizarla
 
 /* Aún falta encontrar el homólogo del useParams en class component
 class Detail extends Component {

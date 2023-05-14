@@ -3,7 +3,7 @@ import React from "react";
 import { Entrada, BtnAgregar, Actividad } from ".././css/estilos.jsx";
 
 
-//FORMA CON FUNCTION
+//FORMA CON FUNCTION  <-- Falta actualizarla
 /* 
 function SearchBar(props) {
    return (
