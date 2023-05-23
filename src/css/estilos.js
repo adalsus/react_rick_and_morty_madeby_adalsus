@@ -29,14 +29,37 @@ const Letras = styled.h3`
   font-size: 2vw;
 `;
 
-const BtnFAVcard = styled.button`
+const UpIMG = styled.div`
   display: flexbox;
-  justify-content: center;
+  justify-content: space-between;
+  margin-top: -2.25vw;
+  align-items: center;
+`;
+
+const BtnFAVcard = styled.button`
   height: 3vw;
   width: 3vw;
   font-size: 1.5vw;
   padding: 0;
-  margin-top: -2.25vw;
+`;
+
+const DID = styled.div`
+  color: #00ff00;
+  height: 3vw;
+  font-weight: bold;
+  font-size: 2vw;
+  padding-top: 3%;
+  padding-right: 2px;
+`;
+
+const DIDfav = styled.div`
+  color: #fff300;
+  height: 3vw;
+  font-weight: bold;
+  font-size: 2vw;
+  padding-top: 3%;
+  padding-right: 2px;
+  margin-left: auto;
 `;
 
 const Caricatura = styled.img`
@@ -114,7 +137,14 @@ const Campos = styled.label`
     margin-bottom: auto;
 `;
 
+const Ordenes = styled.section`
+    display: flexbox;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 2vw;
+`;
 
-export {  FondoCard, Agrupador, BtnFAVcard, Caricatura, Letras, Entrada, BtnAgregar,
-          Menu, Actividad, BtnXcard, Enlaces, DetalleCard, Face, Secc, Login, Campos  }
+
+export {  FondoCard, Agrupador, UpIMG, BtnFAVcard, DID, DIDfav, Caricatura, Letras, Entrada, BtnAgregar,
+          Menu, Actividad, BtnXcard, Enlaces, DetalleCard, Face, Secc, Login, Campos, Ordenes }
 

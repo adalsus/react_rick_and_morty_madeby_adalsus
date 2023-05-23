@@ -1,22 +1,29 @@
 //import { Component } from "react";
 
 import { useParams } from "react-router-dom";
-import { DetalleCard, Caricatura, Letras } from ".././css/estilos.jsx";
+import { DetalleCard, Caricatura, Letras } from ".././css/estilos.js";
 
+import { useLayoutEffect } from 'react';
 
 //FORMA CON FUNCTION
 /* */
 function Detail(props) {
   
-  const { detailId } = useParams({})
-  const [ cromo ] = props.characters.filter( elem => elem.id === detailId-0 );
-  //console.log(cromo);
-  
-  //Lo siguiente inhabilita el botón Agregar ya que su funcionalidad sólo es para Cards
-  if (props.state.valBAdd===false) {
-    Object.assign(props.state,{valBAdd:true});
-  }//
- 
+    const { detailId } = useParams({})
+    const [ cromo ] = props.characters.filter( elem => elem.id === detailId-0 );
+    //console.log(cromo);
+
+    useLayoutEffect(() => {
+        //Cuando se monte cargue ruta actual
+        props.handleClicEnlaces(null);
+
+        //Cuando se desmonte cargue ruta anterior
+        return () => {
+            props.handleClicEnlaces(null);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
   return ( 
       <div>
         <h1>Card Detail</h1>
@@ -30,7 +37,7 @@ function Detail(props) {
         </DetalleCard>
       </div>
   );
-}
+}//Estudiante: Adalberto Monar
 /* */
 
 

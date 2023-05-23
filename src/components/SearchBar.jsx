@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Entrada, BtnAgregar, Actividad } from ".././css/estilos.jsx";
+import { Entrada, BtnAgregar, Actividad } from ".././css/estilos.js";
 
 
 //FORMA CON FUNCTION  <-- Falta actualizarla

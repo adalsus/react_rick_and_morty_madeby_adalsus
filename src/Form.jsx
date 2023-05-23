@@ -6,12 +6,12 @@ import { BrowserRouter } from "react-router-dom";
 import Intro from './Intro.jsx';
 import App from './App.jsx';
 
-import { Login } from "./css/estilos.jsx";
+import { Login } from "./css/estilos.js";
 import { credentials } from './js/credenciales'
 import { fn_deco } from './js/fns/fnsApp';
 
 import background_to_Form from './img/Background_to_Form.jpg'
-import { Campos } from "./css/estilos.jsx";
+import { Campos } from "./css/estilos.js";
 
 import { asignarA } from './js/fns/fnsApp.js';
 import { characters } from './data.js'

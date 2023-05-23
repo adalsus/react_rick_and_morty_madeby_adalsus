@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-import { FondoCard, Caricatura, Letras } from ".././css/estilos.jsx";
+import { FondoCard, Caricatura, UpIMG, DIDfav, Letras } from ".././css/estilos.js";
 import { Link } from "react-router-dom";
 
 
@@ -20,6 +20,11 @@ class Favorito extends Component {
                 <Letras>{this.campos.species}</Letras>
                 <Letras>{this.campos.gender}</Letras>
 
+                <UpIMG>
+                    <DIDfav>
+                        {`ID: ${this.campos.id}`}
+                    </DIDfav>
+                </UpIMG>
                 <Link to={`/detail/${this.campos.id}`}>
                     <Caricatura src={this.campos.image} alt={this.campos.name} />
                 </Link>

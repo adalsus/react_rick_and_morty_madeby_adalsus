@@ -1,5 +1,6 @@
 const ADD_FAV = 'ADD_FAV';
 const REMOVE_FAV = 'REMOVE_FAV';
+const COPYALLAFAV = 'COPYALLAFAV';
 
 const addFav = (personaje) => {
     const action = {
@@ -17,11 +18,21 @@ const removeFav = (id) => {
     return action;
 };
 
+const copyAllaFav = (allMyFavorites) => {
+    const action = {
+        type: COPYALLAFAV,
+        payload: allMyFavorites
+    };
+    return action;
+}
+
 export {
     ADD_FAV,
     REMOVE_FAV,
+    COPYALLAFAV,
     addFav,
-    removeFav
+    removeFav,
+    copyAllaFav
 };
 
 

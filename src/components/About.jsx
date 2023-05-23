@@ -1,14 +1,20 @@
-import { Face, Secc } from ".././css/estilos.jsx";
+import { Face, Secc } from ".././css/estilos.js";
 import monar from '.././img/monar.png';
 
-
+import { useLayoutEffect } from 'react';
 
 const About = (props) => {
 
-    //Lo siguiente inhabilita el botón Agregar ya que su funcionalidad sólo es para Cards
-    if (props.state.valBAdd===false) {
-        Object.assign(props.state,{valBAdd:true});
-    }//
+    useLayoutEffect(() => {
+        //Cuando se monte cargue ruta actual
+        props.handleClicEnlaces(null);
+
+        //Cuando se desmonte cargue ruta anterior
+        return () => {
+            props.handleClicEnlaces(null);
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <div>
@@ -23,6 +29,6 @@ const About = (props) => {
 
         </div>
     );
-}
+}//Estudiante: Adalberto Monar
 
 export default About;
