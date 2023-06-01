@@ -8,6 +8,7 @@ const valCSS = {
   bgSize: "100%",
 }
 
-const URL_BASE = 'https://rickandmortyapi.com/api';
+const URL_BASE = /* 'https://rickandmortyapi.com/api' */ 
+                    'http://localhost:3001/rickandmorty';
 
 export { valCSS, URL_BASE }

@@ -25,7 +25,9 @@ const root = () => {
     //Configuración por defecto
     //conPersonajesRandom = 'si' para asignar Personajes Random
     const conPersonajesRandom = 'si';
-    if (conPersonajesRandom === 'si') asignarA(characters);
+    //826 server externo
+    //5 server node-js configurándolo según M3-homework-02-WebServer-Integration
+    if (conPersonajesRandom === 'si') asignarA(characters, 5);
     //Configuración
 
 

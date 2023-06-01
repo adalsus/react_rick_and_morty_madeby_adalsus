@@ -31,11 +31,11 @@ const fn_retIndex = (id, coleccion) => {
 } 
 
 const randomMin_Max = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-const asignarA = (coleccion) => {
+const asignarA = (coleccion, idMaxPersonajes) => {
     const idsRandom = [];
     const coleccionRandom = [];
     while (idsRandom.length !== coleccion.length) {
-        const idRandom = randomMin_Max(1, 826 + 1);
+        const idRandom = randomMin_Max(1, idMaxPersonajes + 1);
         const cromo = fn_hayID(idRandom, idsRandom);
         if (cromo.length === 0) {
             const obj_id = {
@@ -43,7 +43,10 @@ const asignarA = (coleccion) => {
             }
             idsRandom.push(obj_id);
             
-            axios(`https://rickandmortyapi.com/api/character/${idRandom+''}`)
+            axios(
+                    /*`https://rickandmortyapi.com/api/character/${idRandom+''}`*/
+                    `http://localhost:3001/rickandmorty/character/${idRandom+''}`
+                 )
             .then(
                 ({ data }) => {
                     const obj_data = {
