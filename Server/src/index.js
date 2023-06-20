@@ -1,3 +1,5 @@
+//INICIO-> Configuración con server node
+/*
 const http = require('http')
 const hostname = 'localhost'
 const PORT = 3001
@@ -14,10 +16,10 @@ const server = http.createServer(
             valueID = req.url.replace('/rickandmorty/character/', '') - 0 
             //console.log(valueID)
 
-            /*//personaje(item) desde array data.js
-            const data = require('./utils/data.js')
-            personaje = data.find(elem => elem.id === valueID)
-            //fin personaje desde array*/
+            ////personaje(item) desde array data.js
+            //const data = require('./utils/data.js')
+            //personaje = data.find(elem => elem.id === valueID)
+            //fin personaje desde array
 
             //personaje desde API https://rickandmortyapi.com/api/character/
             getCharById(res,valueID)
@@ -40,3 +42,36 @@ server.listen(
     hostname, 
     () => console.log(`Server running at http://${hostname}:${PORT}`)
 )
+*/
+//FIN-> Con server node
+
+
+
+//INICIO-> Configuración con server express
+const PORT = 3001
+
+const express = require('express')
+const server = express()
+
+const cors = require("cors");
+
+const { getCharById } = require('./controllers/getCharById.js')
+
+server.use(cors());
+
+server.get('/rickandmorty/character/:id', (req, res) => {
+    getCharById(req, res)
+})
+server.get('*', (req, res) => {
+    let fallo = {
+        'error': 'Ruta inválida'
+    }
+    res.json(fallo)
+})
+
+
+server.listen(
+    PORT,
+    () => console.log(`Express-JS running at http://localhost:${PORT}`)
+)
+// FIN -> Con server node

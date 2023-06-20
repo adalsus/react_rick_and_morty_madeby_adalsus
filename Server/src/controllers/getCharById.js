@@ -1,7 +1,8 @@
 const axios = require('axios')
 const URL_BASE = 'https://rickandmortyapi.com/api/character/'
 
-const getCharById = (res_p, id_p) => {
+const getCharById = (req_p, res_p) => {
+    const id_p = req_p.params.id
     //console.log(URL_BASE + id_p)
     let personaje = {}
     axios(URL_BASE + id_p)
@@ -10,19 +11,14 @@ const getCharById = (res_p, id_p) => {
         Object.assign(personaje, response.data) 
         //console.log(personaje);
         //application/json
-        res_p.writeHead(200, { 'Content-Type': 'application/json' })
-        //JSON.stringify
-        res_p.write(JSON.stringify(personaje))
-        res_p.end()
+        res_p.json(personaje)
     })
-    .catch((err) => {
+    .catch(err => {
         //console.log(err)
-        fallo = {
+        let fallo = {
             'error': (err.response.status===404)?'Personaje no encontrado':'Ruta Incorrecta'
         }
-        res_p.writeHead(404, { 'Content-Type': 'application/json' })
-        res_p.write(JSON.stringify(fallo))
-        res_p.end()
+        res_p.status(err.response.status).json(fallo)
     })
 }
 
